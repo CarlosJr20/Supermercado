@@ -68,7 +68,8 @@ public class Mercado {
 
 	private static void cadastrarProdutos() {
 		System.out.println("\nNome do produto: ");
-		input.nextLine();
+		input.nextLine();//limpeza do buffer
+
 		String nome = input.nextLine();
 		
 		System.out.println("Preço do produto: ");

@@ -39,6 +39,6 @@ public class Produtos {
 	public String toString() {
 		return "Id:"+ this.getId()+
 				"\n Nome: "+ this.getNome()+
-				"\n Preço"+ Dinheiro.doubleToString(this.getPreco());
+				"\n Preço "+ Dinheiro.doubleToString(this.getPreco());
 	}
 }

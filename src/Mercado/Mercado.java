@@ -24,6 +24,7 @@ public class Mercado {
 		System.out.println("|   2 - Listar           |");
 		System.out.println("|   3 - Comprar          |");
 		System.out.println("|   4 - Carrinho         |");
+		System.out.println("|   6 - Finalizar Compra |");
 		System.out.println("|   5 - Sair             |");
 		System.out.println("---------------------------------------------------------------");
 		System.out.println("----------------*Digite a seguir a opção escolhida:------------");
@@ -44,6 +45,9 @@ public class Mercado {
 			verCarrinho();
 			break;
 		case 5:
+			finalizarCompra();
+			break;
+		case 6:
 			System.out.println("Obrigado pela preferencia!");
 			System.exit(0);
 		default:
@@ -111,13 +115,15 @@ public class Mercado {
 			}
 			
 			if(isPresent) {
-				System.out.println("Deseja adicionar outro produto ao carrinho? ");
-				System.out.println("Digite 1 para sim, ou 0 para finalizar a compra. \n");
+				System.out.println("\nDeseja adicionar outro produto ao carrinho ");
+				System.out.println("\nDigite 1 para sim \nDigite 2 para ir ao menu \nDigite 0 para finalizar a compra. \n");
 				int opcao = Integer.parseInt(input.next());
 	
 				if(opcao == 1) {
 					comprarProdutos();
-				}else {
+				}else if(opcao == 2){
+					menu();
+				}else{
 					finalizarCompra();
 				}
 			} else {
@@ -135,13 +141,21 @@ public class Mercado {
 			System.out.println("***Produtos no seu carrinho!***");
 			if(carrinho.isEmpty()) {
 				System.out.println("Carrinho vazio");
+				menu();
 			}else {
 				
 				for( Produtos p : carrinho.keySet()) {
 					System.out.println("Produto: "+ p +"\n Quantidade: "+ carrinho.get(p));
 				}
+				System.out.println("\nDigite 1 se deseja Finalizar a Compra? \nDigite qualquer dígito para ir ao Menu");
+				int opcao = Integer.parseInt(input.next());
+				if(opcao == 1){
+					finalizarCompra();
+				}else{
+					menu();
+				}
 			}
-			menu();
+			
 		}
 		
 		private static void finalizarCompra() {

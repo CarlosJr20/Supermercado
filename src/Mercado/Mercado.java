@@ -153,7 +153,7 @@ public class Mercado {
 				menu();
 			}
 		}else{
-			System.out.println("\nEi porra, tá de onda é? tu és Fresco, é? Digita essa porra diteito!\n");
+			System.out.println("\nEi porra, tá de onda é? tu és Fresco, é? Digita essa porra direito!\n");
 			input.next(); 
 			comprarProdutos();
 		}

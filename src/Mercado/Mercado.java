@@ -68,7 +68,8 @@ public class Mercado {
 
 	private static void cadastrarProdutos() {
 		System.out.println("\nNome do produto: ");
-		String nome = input.next();
+		input.nextLine();
+		String nome = input.nextLine();
 		
 		System.out.println("Preço do produto: ");
 		if (input.hasNextDouble() ) {

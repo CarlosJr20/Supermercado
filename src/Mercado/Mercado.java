@@ -17,8 +17,6 @@ public class Mercado {
 	}
 	
 	private static void menu() {
-	
-	
 			System.out.println("\n---------------------------------------------------------------");
 			System.out.println("--------------------Bem-Vindo ao Supermercado------------------");
 			System.out.println("----------------*Selecione o que deseja realizar*--------------");

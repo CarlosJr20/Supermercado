@@ -7,10 +7,10 @@ public class Produtos {
 	private Double preco;
 	
 	public Produtos(int id,String nome, Double preco) {
-		this.id=contar;
+		this.id = contar;
 		this.nome = nome;
 		this.preco = preco;
-		Produtos.contar += 1;
+		Produtos.contar ++;
 	}
 
 	public int getId() {

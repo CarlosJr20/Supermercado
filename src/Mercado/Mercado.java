@@ -87,7 +87,7 @@ public class Mercado {
 	}
 	
 	private static void listarProdutos() {
-		if (produtos.size() > 0) {
+		if (!produtos.isEmpty()) {
 			System.out.println("\nLista de produtos \n");
 			
 			for(Produtos p: produtos) { //Para cada produto (p) dentro da lista de produtos
@@ -100,7 +100,7 @@ public class Mercado {
 	}
 	
 	private static void comprarProdutos() {
-		if(produtos.size() > 0) {
+		if(!produtos.isEmpty()) {
 			// System.out.println("Código do Produto: \n");
 			System.out.println("\n-----------------------Produtos Disponíveis--------------------");
 			
